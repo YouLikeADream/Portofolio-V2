@@ -31,6 +31,7 @@ export default {
           github: 'null',
           demo: 'https://rumahammasoppeng.vercel.app'
         }
+        ,
         {
           id: 4,
           name: 'Aplikasi Parkir By Ferdi',
@@ -62,7 +63,7 @@ export default {
           <div class="grid grid-cols-1 gap-4 pb-32 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-3 2xl:gap-5 fade-zoom-in">
             <div v-for="item in items" :key="item.id">
               <div
-                class="item-card flex flex-col items-center gap-2 rounded bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5 ">
+                class="item-card card-hover zoom-in flex flex-col items-center gap-2 rounded bg-[#1e1e1f] hover:bg-[#282828] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5 ">
                 <div class="flex h-12 w-12 items-center justify-center p-0 h-full w-full lg:p-0 zoom-in">
                   <img alt="HTML" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded rounded-xl"
                     :src="'/img/portfolio-' + item.imageUrl + '.png'">

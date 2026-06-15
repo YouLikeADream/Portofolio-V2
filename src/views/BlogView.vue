@@ -49,7 +49,7 @@
   
 <script>
 import ArticleList from '@/components/ArticleList.vue';
-import axios from "axios";
+import projects from '@/data/projects.js'
 export default {
   data() {
     return {
@@ -64,10 +64,15 @@ export default {
   },
   methods: {
     async getArticles() {
-      axios.get('https://64a38c9cc3b509573b564183.mockapi.io/api/blog/all')
-        .then(response => {
-          this.articles = response.data;
-        })
+      // Use local projects as blog articles to reflect current portfolio
+      this.articles = projects.map(p => ({
+        id: p.id,
+        title: p.title,
+        slug: p.slug,
+        date: p.date,
+        desc: p.desc,
+        image: p.image
+      }));
     },
 
   }
